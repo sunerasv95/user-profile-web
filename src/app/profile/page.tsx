@@ -1,9 +1,9 @@
-import Link from 'next/link'
+import HeadingWithOptionalButton from '../components/navigation/heading-with-opt-button';
 
 const BasicDetails = () => {
     return (
-        <div className='px-5 py-3'>
-            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4">
+        <div className='p-5'>
+            {/* <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4">
                 <h3 className="text-lg font-semibold text-black">Basic Details</h3>
                 <Link href="/profile/edit" className="mt-2 sm:mt-0 text-sm text-gray-500 hover:text-gray-700 flex items-center">
                     <svg className="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -12,7 +12,13 @@ const BasicDetails = () => {
                     </svg>
                     Edit profile
                 </Link>
-            </div>
+            </div> */}
+            
+            <HeadingWithOptionalButton
+                title="Basic Details"
+                editHref="/profile/edit"
+            />
+
             <div className="flex sm:flex-row items-start gap-4 sm:gap-6">
                 <div className="w-[50%] pt-3">
                     <div className="rounded-full bg-gray-300 h-32 w-32 flex items-center justify-center">

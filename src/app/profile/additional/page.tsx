@@ -1,9 +1,9 @@
-import Link from "next/link";
+import HeadingWithOptionalButton from "@/app/components/navigation/heading-with-opt-button";
 
 const AdditionalDetails = () => {
     return (
         <div className="p-5">
-            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4">
+            {/* <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4">
                 <h3 className="text-lg font-semibold text-black">Spouse Details</h3>
                 <Link href="/profile/edit" className="mt-2 sm:mt-0 text-sm text-gray-500 hover:text-gray-700 flex items-center">
                     <svg className="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -12,46 +12,56 @@ const AdditionalDetails = () => {
                     </svg>
                     Edit profile
                 </Link>
-            </div>
+            </div> */}
+
+            <HeadingWithOptionalButton
+                title="Additional Details"
+                editHref="/profile/additional/edit"
+            />
 
             <div className="flex sm:flex-row items-start gap-4 sm:gap-6">
+                <div className="w-[50%] pt-3">
+                    <h4 className="text-bade font-semibold text-black mb-3">Location Information</h4>
+                    <div className="flex flex-col gap-1">
+                        <div className="mb-2">
+                            <label className="block text-gray-500 text-base">Address</label>
+                            <p className="text-gray-700 leading-tight">
+                                17 Kerfield House, 2nd Floor
+                            </p>
+                        </div>
+                        <div className="mb-2">
+                            <label className="block text-gray-500 text-base">Country</label>
+                            <p className="text-gray-700 leading-tight">
+                                United Kingdom
+                            </p>
+                        </div>
+                        <div className="mb-2">
+                            <label className="block text-gray-500 text-base">Postal Code</label>
+                            <p className="text-gray-700 leading-tight">
+                                SW16 4QW
+                            </p>
+                        </div>
+                    </div>
+                </div>
                 <div className="w-[50%] pt-3">
                     <h4 className="text-bade font-semibold text-black mb-3">Personal Details</h4>
                     <div className="flex flex-col gap-1">
                         <div className="mb-2">
-                            <label className="block text-gray-500 text-base">Title</label>
-                            <p className="text-gray-700 leading-tight">
-                                Mrs
-                            </p>
-                        </div>
-                        <div className="mb-2">
-                            <label className="block text-gray-500 text-base">Full Name</label>
-                            <p className="text-gray-700 leading-tight">
-                                Manola Smith
-                            </p>
-                        </div>
-                        <div className="mb-2">
                             <label className="block text-gray-500 text-base">Date of Birth</label>
                             <p className="text-gray-700 leading-tight">
-                                13th March 1990
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-                <div className="w-[50%] pt-3">
-                    <h4 className="text-bade font-semibold text-black mb-3">Contact Information</h4>
-                    <div className="flex flex-col gap-1">
-                        <div className="mb-2">
-                            <label className="block text-gray-500 text-base">Email</label>
-                            <p className="text-gray-700 leading-tight">
-                                manola@app.com
+                                17 March 1990
                             </p>
                         </div>
                         <div className="mb-2">
-                            <label className="block text-gray-500 text-base">Mobile</label>
+                            <label className="block text-gray-500 text-base">Gender</label>
                             <p className="text-gray-700 leading-tight">
-                                +44 223 223445
+                                Gender
+                            </p>
+                        </div>
+                        <div className="mb-2">
+                            <label className="block text-gray-500 text-base">Marital Status</label>
+                            <p className="text-gray-700 leading-tight">
+                                Married
                             </p>
                         </div>
                     </div>

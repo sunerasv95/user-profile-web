@@ -1,6 +1,6 @@
 'use client'
 
-import Link from "next/link";
+import HeadingWithOptionalButton from "@/app/components/navigation/heading-with-opt-button";
 
 export default function PreferencesPage() {
 
@@ -24,7 +24,7 @@ export default function PreferencesPage() {
 
     return (
         <div className="p-5">
-            <div className="flex justify-between items-center mb-6">
+            {/* <div className="flex justify-between items-center mb-6">
                 <h3 className="text-xl font-semibold text-black">Personal Preferences</h3>
                 <Link href="/profile/edit" className="mt-2 sm:mt-0 text-sm text-gray-500 hover:text-gray-700 flex items-center">
                     <svg className="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -33,7 +33,12 @@ export default function PreferencesPage() {
                     </svg>
                     Edit Preferences
                 </Link>
-            </div>
+            </div> */}
+
+            <HeadingWithOptionalButton
+                title="Personal Preferences"
+                editHref="/profile/preferences/edit"
+            />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-white shadow rounded-lg p-6">
